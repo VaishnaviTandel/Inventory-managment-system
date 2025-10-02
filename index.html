@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventory Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="home-bg">
+  <script>
+  if (localStorage.getItem('isLoggedIn') !== 'true') {
+    window.location.href = 'login.html';
+  }
+</script>
+  <div class="container">
+    <h1>Inventory Categories</h1>
+    <button onclick="localStorage.removeItem('isLoggedIn'); window.location.href='login.html';" style="position:absolute;top:20px;right:20px;">Logout</button>
+    <!-- Add this inside your .container in index.html -->
+<a href="notes.html" style="display:inline-block;margin-bottom:20px;color:#fff;background:#f1c40f;padding:10px 20px;border-radius:8px;text-decoration:none;">Go to Notes</a>
+    <div class="cards" id="category-cards"></div>
+  </div>
+
+  <script>
+    
+  // Always use these two categories
+  const categories = ["2.5 HP", "6 HP"];
+
+  // Get products from localStorage or default list
+  const products = JSON.parse(localStorage.getItem('products')) || [
+    { name: 'Motor A', category: '2.5 HP', quantity: 10, price: 150 },
+    { name: 'Motor B', category: '2.5 HP', quantity: 5, price: 200 },
+    { name: 'Motor C', category: '6 HP', quantity: 8, price: 300 },
+    { name: 'Motor D', category: '6 HP', quantity: 3, price: 400 },
+  ];
+  localStorage.setItem('products', JSON.stringify(products));
+
+  const categoryContainer = document.getElementById('category-cards');
+
+  // Render only the two category cards
+  categories.forEach(cat => {
+    const totalQty = products
+      .filter(p => p.category === cat)
+      .reduce((acc, p) => acc + p.quantity, 0);
+
+    const card = document.createElement('div');
+    card.classList.add('card');
+    card.innerHTML = `
+      <h3>${cat}</h3>
+      <p>Total Quantity: ${totalQty}</p>
+    `;
+    card.onclick = () => {
+      localStorage.setItem('selectedCategory', cat);
+      window.location.href = 'category.html';
+    };
+    categoryContainer.appendChild(card);
+  });
+</script>
+</body>
+</html>

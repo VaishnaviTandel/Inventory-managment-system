@@ -10,7 +10,8 @@
 ![Categories Page](https://github.com/VaishnaviTandel/Inventory-managment-system/blob/main/categories%20page.jpg?raw=true)
 
 ### 🔹 Notes Section
-![Notes Page](https://github.com/YourUsername/Inventory-managment-system/blob/main/images/notes.png)
+![Notes Page](https://github.com/VaishnaviTandel/Inventory-managment-system/blob/main/Notes%20page.jpg?raw=true)
+
 
 
 

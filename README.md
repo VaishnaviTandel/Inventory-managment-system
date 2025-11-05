@@ -1,4 +1,7 @@
 ﻿# Inventory-managment-system
+inventory-system1.netlify.app 
+username : admin 
+password : admin123
 
 ### 🔹 Login Page
 ![Login Page](https://github.com/VaishnaviTandel/Inventory-managment-system/blob/main/login%20page.jpg)
@@ -11,6 +14,7 @@
 
 ### 🔹 Notes Section
 ![Notes Page](https://github.com/VaishnaviTandel/Inventory-managment-system/blob/main/Notes%20page.jpg?raw=true)
+
 
 
 

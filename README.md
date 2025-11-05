@@ -1,5 +1,5 @@
 ﻿# Inventory-managment-system
-inventory-system1.netlify.app 
+[inventory-system1.netlify.app ](https://inventory-system1.netlify.app/)
 username : admin 
 password : admin123
 
@@ -14,6 +14,7 @@ password : admin123
 
 ### 🔹 Notes Section
 ![Notes Page](https://github.com/VaishnaviTandel/Inventory-managment-system/blob/main/Notes%20page.jpg?raw=true)
+
 
 
 
